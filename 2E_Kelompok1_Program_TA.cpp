@@ -18,7 +18,7 @@ typedef struct // mempersingkat penulisan tipe data agar tipe data semakin jelas
 // pendefinisian nama variabel baru
 jaya barang[5];
 jaya temp; //temp sebagai tempat penyimpanan sementara saat menukar nilai
-int n, i, b, cari, ada = 0;
+int n, i, b, cari;
 
 // untuk Perulangan Menu
 char kembali1;
