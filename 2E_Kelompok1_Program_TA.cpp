@@ -87,10 +87,12 @@ menu:;
             if (barang[b].kode > barang[b + 1].kode)
             {
                 // menampilkan kode barang
-                temp.kode = barang[b].kode;
-                barang[b].kode = barang[b + 1].kode;
-                barang[b + 1].kode = temp.kode; //temp sebagai tempat penyimpanan sementara saat menukar nilai
-
+                // 5, 2, 1, 4 (CONTOH)
+                temp.kode = barang[b].kode; // simpan nilai yang didepannya, temp=2
+                barang[b].kode = barang[b + 1].kode; // ganti nilai yg didepannya jadi nilai sekarang, b=5
+                barang[b + 1].kode = temp.kode; // nilai sekarang kita ganti menjadi nilai yg didepannya, b=5 ==> temp=2
+                //temp sebagai tempat penyimpanan sementara saat menukar nilai
+                
                 // menampilkan nama barang
                 strcpy(temp.nama, barang[b].nama);
                 strcpy(barang[b].nama, barang[b + 1].nama);
