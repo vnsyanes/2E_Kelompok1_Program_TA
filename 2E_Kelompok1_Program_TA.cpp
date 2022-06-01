@@ -47,7 +47,7 @@ menu:;
     cin >> n;
 
     // perulangan for, agar bisa menyesuaikan dengan banyak data yang diinput
-    for (i = 1; i <= n; i++)
+    for (i = 0; i < n; i++)
     {
         cout << endl;
         cout << "Data Ke- " << (i + 1) << ":" << endl;
@@ -69,7 +69,7 @@ menu:;
     cout << "\t\t\t"
          << "|   Kode Barang   |   Nama Barang   |   Stock Barang   |   Lokasi Barang  |" << endl;
 
-    for (b = 1; b <= n; b++)
+    for (b = 0; b < n; b++)
     {
         cout << "\t\t\t"
              << "|   " << barang[b].kode << "\t\t\t " << barang[b].nama << "\t\t\t" << barang[b].stock << "\t\t" << barang[b].lokasi << "        |" << endl;
@@ -119,7 +119,7 @@ menu:;
     cout << "\t\t\t"
          << "==========================================================================" << endl;
 
-    for (b = 1; b <= n; b++)
+    for (b = 0; b < n; b++)
     {
         cout << "\t\t\t"
              << "|   " << barang[b].kode << "\t\t\t" << barang[b].nama << "\t\t\t" << barang[b].stock << "\t\t" << barang[b].lokasi << "        |" << endl;
@@ -136,7 +136,7 @@ menu:;
          << "Masukkan Kode Barang Untuk Mencari : ";
     cin >> cari;
 
-    for (b = 1; b <= n; b++)
+    for (b = 0; b < n; b++)
     {
         if (barang[b].kode == barang[cari].kode)
         {
@@ -152,7 +152,7 @@ menu:;
             cout << "\t\t\t"
                  << "==========================================================================" << endl;
         }
-        else if (cari > n)
+        else if (cari >= n)
         {
             cout << "Data Tidak di Temukkan " << endl;
         }
