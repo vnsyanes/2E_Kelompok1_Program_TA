@@ -21,7 +21,7 @@ jaya temp; //temp sebagai tempat penyimpanan sementara saat menukar nilai
 int n, i, b, cari;
 
 // untuk Perulangan Menu
-char kembali1;
+char kembali;
 
 int main()
 {
@@ -83,7 +83,7 @@ menu:;
     {
         for (b = 0; b < n - 1; b++)// looping kedua
         {
-            // fungsi swapping
+            // fungsi swapping = fungsi untuk menukarkan dua buah nilai
             if (barang[b].kode > barang[b + 1].kode)
             {
                 // menampilkan kode barang
@@ -106,6 +106,7 @@ menu:;
                 // menampilkan lokasi barang
                 strcpy(temp.lokasi, barang[b].lokasi);
                 strcpy(barang[b].lokasi, barang[b + 1].lokasi);
+                strcpy(barang[b + 1].lokasi, temp.lokasi);
             }
         }
     }
@@ -161,16 +162,16 @@ menu:;
     }
     // untuk Fungsi Kembali
     cout << "Apakah Anda Ingin Kembali Ke Menu (Y/T) ? : ";
-    cin >> kembali1;
+    cin >> kembali;
 
     // jika kembali1 = y atau Y, kode akan dieksekusi
-    if (kembali1 == 'y' || kembali1 == 'Y')
+    if (kembali == 'y' || kembali == 'Y')
     {
         goto menu;
     }
 
     // jika kembali1 = t atau T, kode akan dieksekusi
-    else if (kembali1 == 't' || kembali1 == 'T')
+    else if (kembali == 't' || kembali == 'T')
     {
         system("cls");      // Membersihkan Layar
         system("color F5"); // Mengganti Warna, F = Bright White 5 = Ungu.
